@@ -18,6 +18,8 @@ Global page that will be the state that will be altered each time something happ
 
 * button that will send that info to the API 
     * always visible
+
+** BIG DISPLAY
     
 * big div that will display the needed information from the API
     * location
