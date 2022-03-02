@@ -6,6 +6,8 @@ Weather app that takes an input of a ZIP and calls the weather API and gets the 
 
 Global page that will be the state that will be altered each time something happens 
 
+** SMALL DISPLAY
+
 * input field that a ZIP will be typed into 
     * example text in field as placeholder
     * onchange or onblur that makes this tell user if the info is correct before letting it be sent to the API (uses warn color to signify input isn't proper format)
@@ -31,29 +33,47 @@ Global page that will be the state that will be altered each time something happ
 
 * maybe a timestamp on each search and function that says if the time has been more than 60 mins then it will make a new call and retrieve new info for that ZIP but otherwise will just use the one that's cached
 
-** SMALL DISPLAY
 
-Three parts: 
+<div>
 
-1. TITLE-weather app
-2. INPUT- field that can be typed into
-    * takes ZIP and if it is legit, the request is sent to the API to get the info for that ZIP. 
-    * if it is not legit then warning is shown and the button is disabled.
-    * the info is brought back and shown in the BIG DISPLAY.
-3. BUTTON- get weather
-    * click sends the input ZIP to the API
-    * clears the input when clicked
-    * after click, wait until info is retrieved or not and then show the hidden BIG DISPLAY or pop up the error
+<h1>TITLE-weather app</h1>
+
+<input>INPUT- field that can be typed into</input>
+    function checkZip() {
+        checks the ZIP code input to see if it is legit or not (helper text inside to show proper format)
+    -- IF format is '12345' and a real ZIP then accept it as legit and enable the button
+    -- ELSE send up a warning statement saying that it is not correct and please try again
+    }
+  
+<button>BUTTON- get weather</button>
+  function clearInput(){
+      onclick- the input field clears
+  }
+    function getWeather(){
+        runs onclick
+        axios get info from the weather API, wait for return of promised info
+        IF good info then run buildPage() and fill it with the wanted info
+        ELSE catch the error and send up error message saying something went wrong
+    }
     
+</div>
 ---If API doesn't return good info then it should pop up error message saying that something went wrong and you should try again---
 
-** BIG DISPLAY
+<div>
 
-1. This shows only if the info that comes back from the API is good
-2. Displays the location
-3. Displays the temperature in Celcius, Fahrenheit and Kelvin
-4. Displays the weather condition (raining/sunny/etc)
-5. Displays an image of the type of weather that matches the condition
+-- use JS to make this app build the page using createElement and appendChild
+--remains hidden on start
+function buildPage() {
+    await getWeather
+    IF getWeather() returns info
+    THEN create the page and display the wanted info
+    create div rows and columns that will hold the weather info below
+    row1= display location
+    row2 has three equal columns showing temperatures in K, C, and F
+    row3 displays the weather condition(rainy or sunny)
+    row 4 holds an image that matches the rainy or sunny condition
+}
+
 
     
-
+</div>
