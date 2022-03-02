@@ -1,6 +1,7 @@
 
 //const currentWeather = [];
 let appId = '60e9a913bbf1ad88bff19ed3e1d772c3';
+let input;
 let userZip = `${input.value}`;
 //let condition = currentWeather;
 //let standardTemp = 
