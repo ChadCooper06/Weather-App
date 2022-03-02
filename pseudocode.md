@@ -54,8 +54,16 @@ Global page that will be the state that will be altered each time something happ
     function getWeather(){
         runs onclick
         axios get info from the weather API, wait for return of promised info
-        IF good info then run buildPage() and fill it with the wanted info
+        IF works run the buildPage()
         ELSE catch the error and send up error message saying something went wrong
+    }
+
+    function convertCel() {
+
+    }
+
+    function convertFah() {
+
     }
     
 </div>
@@ -65,10 +73,12 @@ Global page that will be the state that will be altered each time something happ
 
 -- use JS to make this app build the page using createElement and appendChild
 --remains hidden on start
+
 function buildPage() {
     await getWeather
     IF getWeather() returns info
     THEN create the page and display the wanted info
+    - run the functions that change temp from K to C and F
     create div rows and columns that will hold the weather info below
     row1= display location
     row2 has three equal columns showing temperatures in K, C, and F
