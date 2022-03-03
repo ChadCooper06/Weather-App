@@ -9,37 +9,39 @@
     </head>
 
         <body>
-            <div class="weather-container">
+            <div class="weather-container .d-sm-flex align-content-center">
                 <div class="small-display">
                     <h1>Your Weather</h1>
-                    <input  type="text" placeholder="ZIP Code">
-                    <button id="weatherBtn" onclick="getWeather(), clearInput()">Get Weather</button>
+                    <input id="zipInput" type="text" placeholder="ZIP Code">
+                    <button id="weatherBtn" onclick="getWeather(), clearInput(), checkZip()">Get Weather</button>
                 </div>
 
                 <div class="big-display">
 
-                    <div id="location-div" class="col-8" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 id="locale">Location</h5>
-                            
-                        </div>
-                    </div>
-                    
-                    <div id="temp-div" class="col-8" style="width: 18rem;">
-                        <div>
-                            <h5 class="card-title">Temperature</h5>
-                            <div class="row">
-                                <div id="tempK" class="col-4"></div>
-                                <div id="tempC" class="col-4"></div>
-                                <div id="tempF" class="col-4"></div>
-                                
+                    <div id="location-div" class="container">
+                        <div class="row">
+                            <div class="col-8">
+                                <h5 id="locale"></h5>
                             </div>
                         </div>
                     </div>
-                    <div id="condition-div" class="col-8" style="width: 18rem;">
-                        <div class="card-body">
-                            <h6 id="condition" class="card-title">Current Weather</h6>
-                            <p id="description" class="card-text">description</p>
+                    
+                    <div id="temp-div" class="container">
+                        
+                        <h5>Temperature</h5>
+                        <div class="row">
+                            <div id="tempK" class="col-4"></div>
+                            <div id="tempC" class="col-4"></div>
+                            <div id="tempF" class="col-4"></div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div id="container" class="col-8 d-sm-flex" style="width: 18rem;">
+                        <div class="row">
+                            <h6>Current Weather</h6>
+                            <div id="condition" class="col-8"></div>
+                            <p id="description" class="col-8 position-absolute top-50 start-50 translate-middle">description</p>
                             
                         </div>
                     </div>
