@@ -34,6 +34,10 @@ h1, h5 {
     margin-bottom: 20px;
 }
 
+#alert {
+    display:none;
+}
+
 #big-display {
     background: transparent;
 }

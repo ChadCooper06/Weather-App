@@ -16,12 +16,17 @@ weatherBtn.addEventListener('click', getWeather);
 
 //async function that gets the weather
 async function getWeather(){
+    //try{
     userZip = `${document.querySelector('#zipInput').value}`;
     request = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${userZip},us&appid=${appId}`);
         let resp = request.data;
         console.log(resp);
         
         displayWeather(resp)
+    //} catch (error) {
+    //    console.error('error');
+    //    error();
+    //}
 }
 
 //function to display the weather
@@ -53,13 +58,17 @@ function displayWeather(resp) {
   
 }
 /*
+function error() {
+    document.querySelector('#alert')innerHTML = "Please input a valid ZIP";
+}
+
 function checkZip(){
     let zipInput = document.getElementById("zipInput");
     if(!isNaN(zipInput.value) && zipInput.value.length === 5){
         userZip = zipInput.value
         getData()
-        .catch(err => {
-            return new err ("OOPS! Enter a valid ZIP")
+        .catch(error => {
+            return error();
         });
     }
 }
