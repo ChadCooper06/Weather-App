@@ -22,24 +22,12 @@ async function getWeather() {
     return data;
 }
 
-/*async function getWeather() {
-    try{
-    let data = await axios.get(weatherLink);
-    return data;
-    let currentWeather = await data;
-    setState(response)
-    } catch(err) {
-        display.error('Oops! Something went wrong')
-    }
-}
-*/
 let state = {
-    location: [],
-    standardTemp: [],
-    metricTemp: [],
-    imperialTemp: [],
-    condition: [],
-    weatherPic: []
+    location: '',
+    standardTemp: 0,
+    condition: '',
+    description: '',
+    icon: '',
 }
 
 
