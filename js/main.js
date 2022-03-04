@@ -2,7 +2,6 @@
 //setting variables that I can use through the whole app
 let appId = '60e9a913bbf1ad88bff19ed3e1d772c3';
 
-//let result;
 let condition;
 let description;
 let locale;
@@ -10,11 +9,12 @@ let tempK;
 let tempC = tempK-273.15; 
 let tempF = tempC*(9/5)+32;
 
-//let userZip = ; 
 let resp;
 
+//event listener to run my function when the button is clicked
 weatherBtn.addEventListener('click', getWeather);
 
+//async function that gets the weather
 async function getWeather(){
     userZip = `${document.querySelector('#zipInput').value}`;
     request = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${userZip},us&appid=${appId}`);
@@ -24,6 +24,7 @@ async function getWeather(){
         displayWeather(resp)
 }
 
+//function to display the weather
 function displayWeather(resp) {
     //console.log(resp);
     let location = resp.name;
