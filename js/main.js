@@ -10,13 +10,13 @@ let tempK;
 let tempC = tempK-273.15; 
 let tempF = tempC*(9/5)+32;
 
-let userZip = `${document.querySelector('#zipInput').value}`; 
+//let userZip = ; 
 let resp;
 
-weatherBtn.addEventListener('click', getWeather)
+weatherBtn.addEventListener('click', getWeather);
 
 async function getWeather(){
-    
+    userZip = `${document.querySelector('#zipInput').value}`;
     request = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${userZip},us&appid=${appId}`);
         let resp = request.data;
         console.log(resp);
