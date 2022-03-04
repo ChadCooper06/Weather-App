@@ -32,6 +32,8 @@ function displayWeather(resp) {
     let tempF = Math.round(9/5*tempC+32);
     let condition = resp.weather[0].main;
     let description = resp.weather[0].description;
+    let icon = resp.weather[0].icon;
+
 
     const locale = document.querySelector('#locale')
     locale.textContent = `${location}`;
@@ -45,6 +47,8 @@ function displayWeather(resp) {
     currentWeather.textContent = `${condition}`;
     const descrip = document.querySelector('#description');
     descrip.textContent = `${description}`;
+    const icons = document.querySelector('#icon');
+    icons.innerHTML = "<img src = 'https://openweathermap.org/img/wn/" + icon + "@2x.png'>";
   
 }
 /*

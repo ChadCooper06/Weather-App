@@ -1,6 +1,70 @@
 body {
-    background-color: lightskyblue;
+    background-color: rgb(80, 59, 219);
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.div {
+    background: transparent;
+}
+ #temp-div {
+     justify-content: center;
+     align-content:center;
+     background: transparent;
+ }
+
+.row {
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h5 {
+    text-align: center;
+    color:ghostwhite;
+}
+
+#zipInput {
+    margin-left: 10px;
+}
+
+#small-display {
+    background:transparent;
+    margin-bottom: 20px;
+}
+
+#big-display {
+    background: transparent;
+}
+
+#condition {
+    font-size: 40px;
+    justify-content: center;
+    align-content: center;
+    color: ghostwhite;
+}
+
+#description {
+    font-size: 30 px;
+    color:ghostwhite;
+    justify-content: center;
+    align-content: center;
+    padding-top: 15px;
+}
+#temperature {
+    margin-left: 5px;
+    padding: 10px;
+}
+
+#tempK, #tempC, #tempF {
+    color:ghostwhite !important;
+    font-weight: bold;
+    font-size: 15px;
+    align-content: center;
+}
+
+#weatherBtn {
+    border-radius: 50px;
+    background-color: rgb(151, 56, 163);
 }
