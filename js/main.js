@@ -1,4 +1,21 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //setting variables that I can use through the whole app
 let appId = '60e9a913bbf1ad88bff19ed3e1d772c3';
 
